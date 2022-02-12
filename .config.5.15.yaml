@@ -1,0 +1,71 @@
+CONFIG_TARGET_ipq807x=y
+CONFIG_TARGET_ipq807x_generic=y
+CONFIG_TARGET_PER_DEVICE_ROOTFS=y
+CONFIG_TARGET_ROOTFS_INITRAMFS=y
+CONFIG_TARGET_INITRAMFS_COMPRESSION_ZSTD=y
+
+# General
+CONFIG_TARGET_MULTI_PROFILE=y
+CONFIG_TARGET_ALL_PROFILES=y
+
+# # only ax3600
+# CONFIG_TARGET_ipq807x_generic_DEVICE_xiaomi_ax3600=y
+
+# CONFIG_ALL_KMODS=y # build all modules
+
+CONFIG_PACKAGE_luci=y # add luci
+CONFIG_PACKAGE_luci-ssl=y #actihave https
+
+###################################
+#firmware
+CONFIG_PACKAGE_nss-firmware-ipq8074=y
+# CONFIG_PACKAGE_kmod-qca-nss-drv-pppoe=y
+# CONFIG_PACKAGE_kmod-qca-nss-drv-bridge-mgr=y
+# CONFIG_PACKAGE_kmod-qca-nss-ecm=y
+CONFIG_PACKAGE_kmod-qca-nss-dp=y
+# CONFIG_PACKAGE_luci-app-sqm=y              #SQM QoS
+
+CONFIG_PACKAGE_luci-app-upnp=y               #UPnP
+
+###################################
+# wpad full
+CONFIG_PACKAGE_wpad-wolfssl=y
+# CONFIG_PACKAGE_wpad-mini=n
+CONFIG_PACKAGE_wpad-basic-wolfssl=n
+
+###################################
+# services and tools
+CONFIG_PACKAGE_kmod-nf-nathelper-extra=y #for PPTP VPN
+CONFIG_PACKAGE_kmod-wireguard=y #adding support wiregurd
+CONFIG_PACKAGE_luci-app-wireguard=y #adding support wiregurd
+CONFIG_PACKAGE_qrencode=y #adding qrcode for wiregurd
+
+CONFIG_PACKAGE_ipset=y # used in firewall
+
+CONFIG_PACKAGE_luci-app-wol=y # WakeOnLan
+CONFIG_PACKAGE_xl2tpd=y # support l2tp
+CONFIG_PACKAGE_iperf3=y #speed test
+CONFIG_PACKAGE_mc=y # file explorer
+CONFIG_PACKAGE_wget-ssl=y #support ftp in opkg
+
+CONFIG_PACKAGE_resolveip=y
+CONFIG_PACKAGE_tcpdump=y
+CONFIG_PACKAGE_curl=y
+
+# Other
+CONFIG_PACKAGE_arp-scan=y
+CONFIG_PACKAGE_bind-host=y
+CONFIG_PACKAGE_findutils-xargs=y
+
+###################################
+# # firewall4
+# CONFIG_IPTABLES_NFTABLES=y
+# CONFIG_PACKAGE_firewall=n
+# CONFIG_PACKAGE_ip6tables=n
+# CONFIG_PACKAGE_iptables=n
+# CONFIG_PACKAGE_kmod-ipt-offload=n
+CONFIG_PACKAGE_firewall4=y
+# CONFIG_PACKAGE_nftables=y
+# CONFIG_PACKAGE_kmod-nft-offload=y
+# CONFIG_NETFILTER_NETLINK=m
+# CONFIG_NETFILTER_NETLINK_HOOK=m

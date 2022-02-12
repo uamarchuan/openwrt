@@ -30,6 +30,7 @@ endef
 # 1: destination file
 define FeedSourcesAppend
 ( \
+  echo 'src/gz %d_build https://openwrt.marchukan.com/%S/robimarko/$(shell date +"%Y%m%d")/packages'; \
   echo 'src/gz %d_core %U/targets/%S/packages'; \
   $(strip $(if $(CONFIG_PER_FEED_REPO), \
 	echo 'src/gz %d_base %U/packages/%A/base'; \
