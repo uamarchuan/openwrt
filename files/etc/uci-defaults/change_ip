@@ -1,0 +1,8 @@
+#uci set network.lan=interface
+#uci set network.lan.device='br-lan'
+#uci set network.lan.proto='static'
+uci set network.lan.ipaddr='10.10.10.1'
+uci set network.lan.netmask='255.255.255.0'
+#uci set network.lan.ip6assign='60'
+
+uci commit
